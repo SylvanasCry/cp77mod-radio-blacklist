@@ -1,0 +1,4 @@
+# Build outputs (rebuild with build.py)
+dist/
+build/
+__pycache__/
