@@ -12,8 +12,9 @@ Status: 0.1.0, not published yet. Checked in game on 2026-11-24 (game 2.5, with
 RadioExt and Maelstrom Radio installed): the settings page with Ukrainian texts, hidden
 stations in the vehicle and pocket radio list, replacement on getting into other
 people's vehicles, the radio turning off when every station is blacklisted, Maelstrom
-Radio left alone. Not checked yet: cycling with the radio button (the Radioport
-setting that makes a short press cycle stations).
+Radio left alone. Checked on 2026-11-25: cycling with the radio button (Radioport
+setting "cycle stations") in a vehicle and on foot, the on-screen notice setting, and
+installing the zip through Vortex ("Install From File").
 
 ## Requirements
 
@@ -31,10 +32,12 @@ Custom stations added by other mods (RadioExt) are not listed and are never touc
 The mod's own texts are translated to English, Ukrainian and Russian; other languages
 fall back to English.
 
-"Debug log" writes what the mod does to the CET game log
-(`bin/x64/plugins/cyber_engine_tweaks/gamelog.log`, lines tagged `[RadioBlacklist]`)
-and shows every replaced station on the HUD, for example
+"Show replacements on screen" (off by default) shows a short HUD notice whenever the
+mod switches a station or turns the radio off, for example
 `Radio Blacklist: 96,1 «Ритуал-ФМ» -> 99,9 «Імпульс»`.
+
+"Debug log" (off by default) writes what the mod does to the CET game log
+(`bin/x64/plugins/cyber_engine_tweaks/gamelog.log`, lines tagged `[RadioBlacklist]`).
 
 ## How it works
 
@@ -72,10 +75,25 @@ Read in the game scripts (REDmod sources dated 2026-03-02, game 2.31 or older).
   someone else's and never touches it (checked in game, 2026-11-24: Maelstrom Radio was
   left alone). Another custom-radio mod could report its stations differently; this
   numbering is RadioExt's convention, not the game's.
+- **Cycling with the radio button and RadioExt.** In a vehicle the button calls the
+  engine's `NextRadioReceiverStation`, which knows only vanilla stations, so cycling
+  never reaches custom stations. This is a RadioExt limitation, not this mod's: RadioExt
+  only observes that call, with an author's note `TODO: Make this properly change the
+  station, also for custom ones` (read in its code). On foot RadioExt cycles by itself
+  through the radio list, which this mod hands over without blacklisted stations, so
+  custom stations are reached there (checked in game, 2026-11-25). To be repeated in
+  the Compatibility section of the Nexus page.
 - **New vanilla stations** (HKGN 102.0 arrived in 2.x as index 14). The vanilla range
   comes from `GetStationsCount()`, not from a constant in this mod, and RadioExt uses the
   same function, so both shift together. A new station would have no checkbox until the
   mod is updated: it is simply never blocked.
+
+## Out of scope
+
+Radios and jukeboxes placed in the world (`RadioController`, `JukeboxController`),
+including the radio in V's apartment, are not touched and will not be: they have their
+own station logic, and covering them would open a wide field of edge cases and
+requests (decided 2026-11-24). The mod covers the vehicle radio and the Radioport only.
 
 ## Planned for 1.1
 
@@ -104,7 +122,7 @@ other checkboxes on the open page redraw at once has to be tested in game.
 ## Build
 
 ```
-python build.py            # dist/RadioBlacklist-<version>.zip
+python build.py            # dist/RadioBlacklist.zip (no version in the name, see build.py)
 python build.py --deploy   # also copy the scripts into the game for testing
 python build.py --check    # compile offline first, with every installed redscript mod
 ```

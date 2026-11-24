@@ -97,6 +97,12 @@ public class RadioBlacklistConfig extends IScriptable {
     public let blockDarkStar: Bool = false;
 
     @runtimeProperty("ModSettings.mod", "Radio Blacklist")
+    @runtimeProperty("ModSettings.category", "RadioBlacklist-Display")
+    @runtimeProperty("ModSettings.displayName", "RadioBlacklist-ShowNotice")
+    @runtimeProperty("ModSettings.description", "RadioBlacklist-ShowNoticeDescription")
+    public let showNotice: Bool = false;
+
+    @runtimeProperty("ModSettings.mod", "Radio Blacklist")
     @runtimeProperty("ModSettings.category", "RadioBlacklist-Debug")
     @runtimeProperty("ModSettings.displayName", "RadioBlacklist-DebugLog")
     @runtimeProperty("ModSettings.description", "RadioBlacklist-DebugLogDescription")

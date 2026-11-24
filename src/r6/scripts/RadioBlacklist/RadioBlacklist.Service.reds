@@ -159,10 +159,10 @@ public class RadioBlacklistService extends ScriptableService {
     }
 
     /**
-     * With the debug log on, also shows a replacement on the HUD ("A -> B", or "A -> off").
+     * When enabled in the settings, shows a replacement on the HUD ("A -> B", or "A -> off").
      */
     public func Notify(game: GameInstance, station: Int32, replacement: Int32) {
-        if !IsDefined(this.m_config) || !this.m_config.debugLog {
+        if !IsDefined(this.m_config) || !this.m_config.showNotice {
             return;
         }
         let to = replacement == -1 ? "off" : this.StationName(replacement);

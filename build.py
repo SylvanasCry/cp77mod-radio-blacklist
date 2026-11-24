@@ -1,7 +1,10 @@
 """Build Radio Blacklist.
 
 Outputs (next to this script):
-  dist/RadioBlacklist-<version>.zip  (install it in Vortex with "Install From File")
+  dist/RadioBlacklist.zip  (install it in Vortex with "Install From File")
+
+The archive name has no version on purpose: Nexus Mods copies the file name into the
+file title and the download name, and the version has its own field there.
 
 With --deploy the scripts are also copied straight into the game folder
 (r6/scripts/RadioBlacklist) for quick testing without Vortex.
@@ -21,7 +24,6 @@ import sys
 import zipfile
 from pathlib import Path
 
-VERSION = "0.1.0"
 ROOT = Path(__file__).resolve().parent
 SRC = ROOT / "src"
 SCRIPTS = Path("r6/scripts/RadioBlacklist")
@@ -30,7 +32,7 @@ SCRIPTS = Path("r6/scripts/RadioBlacklist")
 def build() -> Path:
     dist = ROOT / "dist"
     dist.mkdir(exist_ok=True)
-    archive = dist / f"RadioBlacklist-{VERSION}.zip"
+    archive = dist / "RadioBlacklist.zip"
     with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED) as zf:
         for path in sorted(SRC.rglob("*")):
             if path.is_file():
