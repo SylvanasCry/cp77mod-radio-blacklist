@@ -3,6 +3,9 @@ dist/
 build/
 __pycache__/
 
+# Header preview with the Nexus overlay (rebuilt by art/make_header.py)
+art/preview*.png
+
 # Local IDE setup (.redscript holds the local game path)
 .idea/
 .redscript
