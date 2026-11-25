@@ -42,6 +42,9 @@ TEXT_LEFT = 72
 TITLE_TOP = 100
 TITLE_SIZE = 64
 SLOGAN_GAP = 18
+# The ink of "R" starts 3 px right of its box at this size, while the tips
+# of "Y" start right at it: nudge the slogan so both share one left edge.
+SLOGAN_NUDGE = 3
 SLOGAN_SIZE = 25
 
 BAR_CENTER_Y = 135
@@ -166,7 +169,7 @@ def draw_text(draw):
     draw.text((title_x, title_y), TITLE, font=title_font, fill=TITLE_COLOR)
     draw_axis(draw)
     slogan_top = TITLE_TOP + (title_box[3] - title_box[1]) / SCALE + SLOGAN_GAP
-    slogan_x = s(TEXT_LEFT) - slogan_box[0]
+    slogan_x = s(TEXT_LEFT + SLOGAN_NUDGE) - slogan_box[0]
     slogan_y = s(slogan_top) - slogan_box[1]
     draw.text((slogan_x, slogan_y), SLOGAN, font=slogan_font, fill=SLOGAN_COLOR)
     text_right = TEXT_LEFT + max(title_box[2] - title_box[0], slogan_box[2] - slogan_box[0]) / SCALE
