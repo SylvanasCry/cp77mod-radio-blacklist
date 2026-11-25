@@ -2,3 +2,7 @@
 dist/
 build/
 __pycache__/
+
+# Local IDE setup (.redscript holds the local game path)
+.idea/
+.redscript
