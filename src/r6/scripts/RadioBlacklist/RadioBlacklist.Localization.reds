@@ -26,7 +26,7 @@ public class RadioBlacklistLocalizationProvider extends ModLocalizationProvider 
 public class RadioBlacklistEnglish extends ModLocalizationPackage {
     protected func DefineTexts() {
         this.Text("RadioBlacklist-Category", "Stations to skip");
-        this.Text("RadioBlacklist-StationDescription", "Never pick this station at random or while cycling with the radio button. You can still choose it from the radio list.");
+        this.Text("RadioBlacklist-StationDescription", "Never play this station and hide it from the radio list. Turn off to hear it again.");
         this.Text("RadioBlacklist-Display", "Display");
         this.Text("RadioBlacklist-ShowNotice", "Show replacements on screen");
         this.Text("RadioBlacklist-ShowNoticeDescription", "Show a short notice when the mod switches a station or turns the radio off.");
@@ -39,7 +39,7 @@ public class RadioBlacklistEnglish extends ModLocalizationPackage {
 public class RadioBlacklistUkrainian extends ModLocalizationPackage {
     protected func DefineTexts() {
         this.Text("RadioBlacklist-Category", "Пропускати станції");
-        this.Text("RadioBlacklist-StationDescription", "Ніколи не вмикати цю станцію випадково чи під час перемикання кнопкою радіо. Обрати її зі списку радіо можна й надалі.");
+        this.Text("RadioBlacklist-StationDescription", "Ніколи не вмикати цю станцію та сховати її зі списку радіо. Вимкніть, щоб знову її чути.");
         this.Text("RadioBlacklist-Display", "Відображення");
         this.Text("RadioBlacklist-ShowNotice", "Показувати заміни на екрані");
         this.Text("RadioBlacklist-ShowNoticeDescription", "Показувати коротке повідомлення, коли мод перемикає станцію або вимикає радіо.");
@@ -52,7 +52,7 @@ public class RadioBlacklistUkrainian extends ModLocalizationPackage {
 public class RadioBlacklistRussian extends ModLocalizationPackage {
     protected func DefineTexts() {
         this.Text("RadioBlacklist-Category", "Пропускать станции");
-        this.Text("RadioBlacklist-StationDescription", "Никогда не включать эту станцию случайно или при переключении кнопкой радио. Выбрать её из списка радио по-прежнему можно.");
+        this.Text("RadioBlacklist-StationDescription", "Никогда не включать эту станцию и скрыть её из списка радио. Выключите, чтобы снова её слышать.");
         this.Text("RadioBlacklist-Display", "Отображение");
         this.Text("RadioBlacklist-ShowNotice", "Показывать замены на экране");
         this.Text("RadioBlacklist-ShowNoticeDescription", "Показывать короткое сообщение, когда мод переключает станцию или выключает радио.");

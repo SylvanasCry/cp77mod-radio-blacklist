@@ -4,106 +4,125 @@ module RadioBlacklist
  * Mod Settings page: one checkbox per vanilla station, ordered by frequency as in the
  * radio list. Station labels are the game's own localization keys, so they show the
  * station name in the current UI language. Custom stations (RadioExt) are not listed.
+ * Mod Settings sorts categories by name unless they have an order, so the stations
+ * come first, then the display options, then debug.
  */
 public class RadioBlacklistConfig extends IScriptable {
     @runtimeProperty("ModSettings.mod", "Radio Blacklist")
     @runtimeProperty("ModSettings.category", "RadioBlacklist-Category")
+    @runtimeProperty("ModSettings.category.order", "0")
     @runtimeProperty("ModSettings.displayName", "Gameplay-Devices-Radio-RadioStationDownTempo")
     @runtimeProperty("ModSettings.description", "RadioBlacklist-StationDescription")
     public let blockDownTempo: Bool = false;
 
     @runtimeProperty("ModSettings.mod", "Radio Blacklist")
     @runtimeProperty("ModSettings.category", "RadioBlacklist-Category")
+    @runtimeProperty("ModSettings.category.order", "0")
     @runtimeProperty("ModSettings.displayName", "Gameplay-Devices-Radio-RadioStationAggroIndie")
     @runtimeProperty("ModSettings.description", "RadioBlacklist-StationDescription")
     public let blockAggroIndustrial: Bool = false;
 
     @runtimeProperty("ModSettings.mod", "Radio Blacklist")
     @runtimeProperty("ModSettings.category", "RadioBlacklist-Category")
+    @runtimeProperty("ModSettings.category.order", "0")
     @runtimeProperty("ModSettings.displayName", "Gameplay-Devices-Radio-RadioStationGrowlFm")
     @runtimeProperty("ModSettings.description", "RadioBlacklist-StationDescription")
     public let blockGrowl: Bool = false;
 
     @runtimeProperty("ModSettings.mod", "Radio Blacklist")
     @runtimeProperty("ModSettings.category", "RadioBlacklist-Category")
+    @runtimeProperty("ModSettings.category.order", "0")
     @runtimeProperty("ModSettings.displayName", "Gameplay-Devices-Radio-RadioStationJazz")
     @runtimeProperty("ModSettings.description", "RadioBlacklist-StationDescription")
     public let blockJazz: Bool = false;
 
     @runtimeProperty("ModSettings.mod", "Radio Blacklist")
     @runtimeProperty("ModSettings.category", "RadioBlacklist-Category")
+    @runtimeProperty("ModSettings.category.order", "0")
     @runtimeProperty("ModSettings.displayName", "Gameplay-Devices-Radio-RadioStationElectroIndie")
     @runtimeProperty("ModSettings.description", "RadioBlacklist-StationDescription")
     public let blockElectroIndustrial: Bool = false;
 
     @runtimeProperty("ModSettings.mod", "Radio Blacklist")
     @runtimeProperty("ModSettings.category", "RadioBlacklist-Category")
+    @runtimeProperty("ModSettings.category.order", "0")
     @runtimeProperty("ModSettings.displayName", "Gameplay-Devices-Radio-RadioStationMinimalTechno")
     @runtimeProperty("ModSettings.description", "RadioBlacklist-StationDescription")
     public let blockMinimalTechno: Bool = false;
 
     @runtimeProperty("ModSettings.mod", "Radio Blacklist")
     @runtimeProperty("ModSettings.category", "RadioBlacklist-Category")
+    @runtimeProperty("ModSettings.category.order", "0")
     @runtimeProperty("ModSettings.displayName", "Gameplay-Devices-Radio-RadioStationMetal")
     @runtimeProperty("ModSettings.description", "RadioBlacklist-StationDescription")
     public let blockMetal: Bool = false;
 
     @runtimeProperty("ModSettings.mod", "Radio Blacklist")
     @runtimeProperty("ModSettings.category", "RadioBlacklist-Category")
+    @runtimeProperty("ModSettings.category.order", "0")
     @runtimeProperty("ModSettings.displayName", "Gameplay-Devices-Radio-RadioStationPop")
     @runtimeProperty("ModSettings.description", "RadioBlacklist-StationDescription")
     public let blockPop: Bool = false;
 
     @runtimeProperty("ModSettings.mod", "Radio Blacklist")
     @runtimeProperty("ModSettings.category", "RadioBlacklist-Category")
+    @runtimeProperty("ModSettings.category.order", "0")
     @runtimeProperty("ModSettings.displayName", "Gameplay-Devices-Radio-RadioStationImpulseFM")
     @runtimeProperty("ModSettings.description", "RadioBlacklist-StationDescription")
     public let blockImpulse: Bool = false;
 
     @runtimeProperty("ModSettings.mod", "Radio Blacklist")
     @runtimeProperty("ModSettings.category", "RadioBlacklist-Category")
+    @runtimeProperty("ModSettings.category.order", "0")
     @runtimeProperty("ModSettings.displayName", "Gameplay-Devices-Radio-RadioStationHipHop")
     @runtimeProperty("ModSettings.description", "RadioBlacklist-StationDescription")
     public let blockHipHop: Bool = false;
 
     @runtimeProperty("ModSettings.mod", "Radio Blacklist")
     @runtimeProperty("ModSettings.category", "RadioBlacklist-Category")
+    @runtimeProperty("ModSettings.category.order", "0")
     @runtimeProperty("ModSettings.displayName", "Gameplay-Devices-Radio-RadioStationEdgerunners")
     @runtimeProperty("ModSettings.description", "RadioBlacklist-StationDescription")
     public let blockEdgerunners: Bool = false;
 
     @runtimeProperty("ModSettings.mod", "Radio Blacklist")
     @runtimeProperty("ModSettings.category", "RadioBlacklist-Category")
+    @runtimeProperty("ModSettings.category.order", "0")
     @runtimeProperty("ModSettings.displayName", "Gameplay-Devices-Radio-RadioStationAggroTechno")
     @runtimeProperty("ModSettings.description", "RadioBlacklist-StationDescription")
     public let blockAggroTechno: Bool = false;
 
     @runtimeProperty("ModSettings.mod", "Radio Blacklist")
     @runtimeProperty("ModSettings.category", "RadioBlacklist-Category")
+    @runtimeProperty("ModSettings.category.order", "0")
     @runtimeProperty("ModSettings.displayName", "Gameplay-Devices-Radio-RadioStationLatino")
     @runtimeProperty("ModSettings.description", "RadioBlacklist-StationDescription")
     public let blockLatino: Bool = false;
 
     @runtimeProperty("ModSettings.mod", "Radio Blacklist")
     @runtimeProperty("ModSettings.category", "RadioBlacklist-Category")
+    @runtimeProperty("ModSettings.category.order", "0")
     @runtimeProperty("ModSettings.displayName", "Gameplay-Devices-Radio-RadioStationAttRock")
     @runtimeProperty("ModSettings.description", "RadioBlacklist-StationDescription")
     public let blockAttitudeRock: Bool = false;
 
     @runtimeProperty("ModSettings.mod", "Radio Blacklist")
     @runtimeProperty("ModSettings.category", "RadioBlacklist-Category")
+    @runtimeProperty("ModSettings.category.order", "0")
     @runtimeProperty("ModSettings.displayName", "Gameplay-Devices-Radio-RadioStationDarkStar")
     @runtimeProperty("ModSettings.description", "RadioBlacklist-StationDescription")
     public let blockDarkStar: Bool = false;
 
     @runtimeProperty("ModSettings.mod", "Radio Blacklist")
     @runtimeProperty("ModSettings.category", "RadioBlacklist-Display")
+    @runtimeProperty("ModSettings.category.order", "1")
     @runtimeProperty("ModSettings.displayName", "RadioBlacklist-ShowNotice")
     @runtimeProperty("ModSettings.description", "RadioBlacklist-ShowNoticeDescription")
     public let showNotice: Bool = false;
 
     @runtimeProperty("ModSettings.mod", "Radio Blacklist")
     @runtimeProperty("ModSettings.category", "RadioBlacklist-Debug")
+    @runtimeProperty("ModSettings.category.order", "2")
     @runtimeProperty("ModSettings.displayName", "RadioBlacklist-DebugLog")
     @runtimeProperty("ModSettings.description", "RadioBlacklist-DebugLogDescription")
     public let debugLog: Bool = false;
