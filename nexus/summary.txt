@@ -1,0 +1,1 @@
+Pick the vanilla radio stations you never want to hear. They disappear from the radio list, cars stop starting them on their own, and cycling skips them. RadioExt stations are left alone.

@@ -8,7 +8,9 @@ stations are also hidden from the radio list; to hear one again, untick it.
 
 Author: Sylvanas Cry (Nexus: SylvanasCry).
 
-Status: 0.1.0, not published yet. Checked in game on 2026-11-24 (game 2.5, with
+Status: 0.1.0, published on Nexus Mods on 2026-11-25:
+<https://www.nexusmods.com/cyberpunk2077/mods/39566>. The page text, header and
+screenshots are in `nexus/`. Checked in game on 2026-11-24 (game 2.5, with
 RadioExt and Maelstrom Radio installed): the settings page with Ukrainian texts, hidden
 stations in the vehicle and pocket radio list, replacement on getting into other
 people's vehicles, the radio turning off when every station is blacklisted, Maelstrom
